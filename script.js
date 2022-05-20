@@ -32,6 +32,14 @@ function takePhoto() {
     snap.play()
 }
 
+const data = canvas.toDataURL('image/jpeg');
+const link = document.createElement('a');
+link.href = data;
+link.setAttribute('download', 'handsome');
+link.textContent = 'Download Image';
+strip.insertBefore(link, strip.firstChild);
+
+
 getVideo();
 
 
